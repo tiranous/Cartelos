@@ -40,9 +40,9 @@ Public Sub IO_ResetOutput(ByVal templateWs As Worksheet, _
 End Sub
 
 Public Sub IO_WriteDefaultShiftSummary(ByVal outputWs As Worksheet)
-    outputWs.Range("C11").Value = "'       07:00-15:00"
-    outputWs.Range("E11").Value = "'       15:00-23:00"
-    outputWs.Range("G11").Value = "'       23:00-07:00"
+    outputWs.Range("C11").Value = "'       Α΄ ΒΑΡΔΙΑ"
+    outputWs.Range("E11").Value = "'       Β΄ ΒΑΡΔΙΑ"
+    outputWs.Range("G11").Value = "'       Γ΄ ΒΑΡΔΙΑ"
 End Sub
 
 Public Sub IO_WriteShiftRow(ByVal outputWs As Worksheet, _
