@@ -1,5 +1,10 @@
 # AGENTS.md — Instructions for Codex
 
+Work directly on `main` (no PRs).
+After finishing tasks, commit and push to GitHub main branch.
+Then bump VERSION, update CHANGELOG.md, and create a tag vX.Y.Z.
+
+
 ## Project Context
 - This is an Excel `.xlsm` project with VBA code exported as plain text files in `./git/` (or `./vba-src/`).
 - Document modules are `ThisWorkbook.cls`, `Sheet1.cls`, `Sheet2.cls`, … (names must match VBE component names).
