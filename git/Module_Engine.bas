@@ -121,7 +121,7 @@ Public Function Engine_GetDefaultConfig() As CardGenerationConfig
     config.LookupContractColumn = 4
     config.EmployeeCodeTargetAddress = "G45"
     config.TemplateRange = "A1:O60"
-    config.SaveFolder = Utils_NormalizePath(ThisWorkbook.Path)
+    config.SaveFolder = Utils_NormalizePath(Utils_CombinePath(ThisWorkbook.Path, "wh"))
     config.SaveSuffix = ""
     config.SaveExtension = ".xls"
     config.SaveEnabled = True
@@ -285,7 +285,7 @@ Private Function Engine_BuildFilePath(ByVal config As CardGenerationConfig, _
     baseFolder = Utils_NormalizePath(config.SaveFolder)
 
     If baseFolder = vbNullString Then
-        baseFolder = Utils_NormalizePath(ThisWorkbook.Path)
+        baseFolder = Utils_NormalizePath(Utils_CombinePath(ThisWorkbook.Path, "wh"))
     End If
 
     If baseFolder = vbNullString Then
