@@ -126,9 +126,14 @@ Public Function Engine_GetDefaultConfig() As CardGenerationConfig
     config.SaveExtension = ".xls"
     config.SaveEnabled = True
 
-    Dim badges As Variant
-    badges = Array("90087332", "90087495")
-    config.SpecialBadgesWithoutContract = badges
+    Dim specialBadgesSource As Variant
+    specialBadgesSource = Array("90087332", "90087495")
+
+    Dim badgeIndex As Long
+    ReDim config.SpecialBadgesWithoutContract(LBound(specialBadgesSource) To UBound(specialBadgesSource))
+    For badgeIndex = LBound(specialBadgesSource) To UBound(specialBadgesSource)
+        config.SpecialBadgesWithoutContract(badgeIndex) = CStr(specialBadgesSource(badgeIndex))
+    Next badgeIndex
 
     Dim settingsWs As Worksheet
     Set settingsWs = IO_TryGetWorksheet(config.SettingsSheetName)
