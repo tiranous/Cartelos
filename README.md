@@ -1,2 +1,0 @@
-# Cartelos
-Excel Automation
